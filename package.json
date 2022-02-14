@@ -12,6 +12,7 @@
   },
   "author": "Stephen King, Frank Darabont",
   "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/in-javascript/The-Shawshank-Redemption/issues"
   },
