@@ -9,6 +9,7 @@ import { Gun } from "./items/gun.js";
 import { Brooks } from "./characters/brooksHatlen.js";
 import { Bogs } from "./characters/bogsDiamond.js";
 import { nameOfAndysRockHammer } from "./helpers/statics.js";
+import { AndysPrisonCell } from "./places/andysPrisonCell.js";
 
 const andysGun = new Gun("Andy's gun", false);
 let andysRockHammer = null;
@@ -23,6 +24,7 @@ let andysRockHammer = null;
     BogsIntroduced();
     AndyWantsARockHammerFromRed();
     AndyGetsProtectionFromHadley();
+    AndyCarvesTheWall();
 })();
 
 function introduction() {
@@ -61,4 +63,8 @@ function AndyWantsARockHammerFromRed() {
 
 function AndyGetsProtectionFromHadley() {
     Andy.provideConsultancyServices(Hadley);
+}
+
+function AndyCarvesTheWall() {
+    AndysPrisonCell.carve("A");
 }
