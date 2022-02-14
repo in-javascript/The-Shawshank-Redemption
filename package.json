@@ -1,0 +1,19 @@
+{
+  "name": "the-shawshank-redemption",
+  "version": "1.0.0",
+  "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/in-javascript/The-Shawshank-Redemption.git"
+  },
+  "author": "Stephen King, Frank Darabont",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/in-javascript/The-Shawshank-Redemption/issues"
+  },
+  "homepage": "https://github.com/in-javascript/The-Shawshank-Redemption#readme"
+}
