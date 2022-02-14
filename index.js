@@ -8,8 +8,10 @@ import { ParoleBoard } from "./institutions/paroleBoard.js";
 import { Gun } from "./items/gun.js";
 import { Brooks } from "./characters/brooksHatlen.js";
 import { Bogs } from "./characters/bogsDiamond.js";
+import { nameOfAndysRockHammer } from "./helpers/statics.js";
 
 const andysGun = new Gun("Andy's gun", false);
+let andysRockHammer = null;
 
 (function PlayMovie() {
     introduction();
@@ -19,6 +21,7 @@ const andysGun = new Gun("Andy's gun", false);
     HadleyIntroduced();
     BrooksIntroduced();
     BogsIntroduced();
+    AndyWantsARockHammerFromRed();
 })();
 
 function introduction() {
@@ -49,4 +52,8 @@ function BrooksIntroduced() {
 
 function BogsIntroduced() {
     Bogs.introduceYourself();
+}
+
+function AndyWantsARockHammerFromRed() {
+    andysRockHammer = Red.get(nameOfAndysRockHammer);
 }
