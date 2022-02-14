@@ -1,8 +1,9 @@
 import { Actable } from "../helpers/actable.js";
 
 class Character extends Actable {
-    constructor(name) {
+    constructor(name, introductoryWords) {
         super(name);
+        this.introductoryWords = introductoryWords ? introductoryWords : "I have nothing to say.";
     }
 
     go(somewhere) {
@@ -15,6 +16,14 @@ class Character extends Actable {
 
     shouldBeGrantedParole() {
         return false;
+    }
+
+    introduceYourself() {
+        this.say(`Hi, I'm ${this.name}. ${this.introductoryWords}`);
+    }
+
+    say(something) {
+        this.act("says: ", `"${something}"`);
     }
 }
 

@@ -1,6 +1,7 @@
 import { Andy } from "./characters/andyDufresne.js";
 import { Red } from "./characters/ellisBoydRedding.js";
 import { Glenn } from "./characters/glennQuentin.js";
+import { Norton } from "./characters/wardenNorton.js";
 import { Court } from "./institutions/court.js";
 import { ParoleBoard } from "./institutions/paroleBoard.js";
 import { Gun } from "./items/gun.js";
@@ -11,6 +12,7 @@ const andysGun = new Gun("Andy's gun", false);
     introduction();
     court();
     RedIntroduced();
+    NortonIntroduced();
 })();
 
 function introduction() {
@@ -25,4 +27,8 @@ function court() {
 
 function RedIntroduced() {
     ParoleBoard.assessParoleGrant(Red);
+}
+
+function NortonIntroduced() {
+    Norton.introduceYourself();
 }
