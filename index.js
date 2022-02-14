@@ -22,6 +22,7 @@ let andysRockHammer = null;
     BrooksIntroduced();
     BogsIntroduced();
     AndyWantsARockHammerFromRed();
+    AndyGetsProtectionFromHadley();
 })();
 
 function introduction() {
@@ -56,4 +57,8 @@ function BogsIntroduced() {
 
 function AndyWantsARockHammerFromRed() {
     andysRockHammer = Red.get(nameOfAndysRockHammer);
+}
+
+function AndyGetsProtectionFromHadley() {
+    Andy.provideConsultancyServices(Hadley);
 }
