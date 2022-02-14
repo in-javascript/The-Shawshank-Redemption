@@ -7,6 +7,7 @@ import { Court } from "./institutions/court.js";
 import { ParoleBoard } from "./institutions/paroleBoard.js";
 import { Gun } from "./items/gun.js";
 import { Brooks } from "./characters/brooksHatlen.js";
+import { Bogs } from "./characters/bogsDiamond.js";
 
 const andysGun = new Gun("Andy's gun", false);
 
@@ -17,6 +18,7 @@ const andysGun = new Gun("Andy's gun", false);
     NortonIntroduced();
     HadleyIntroduced();
     BrooksIntroduced();
+    BogsIntroduced();
 })();
 
 function introduction() {
@@ -43,4 +45,8 @@ function HadleyIntroduced() {
 
 function BrooksIntroduced() {
     Brooks.introduceYourself();
+}
+
+function BogsIntroduced() {
+    Bogs.introduceYourself();
 }
