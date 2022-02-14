@@ -1,4 +1,5 @@
 import { Andy } from "./characters/andyDufresne.js";
+import { Hadley } from "./characters/captainHadley.js";
 import { Red } from "./characters/ellisBoydRedding.js";
 import { Glenn } from "./characters/glennQuentin.js";
 import { Norton } from "./characters/wardenNorton.js";
@@ -13,6 +14,7 @@ const andysGun = new Gun("Andy's gun", false);
     court();
     RedIntroduced();
     NortonIntroduced();
+    HadleyIntroduced();
 })();
 
 function introduction() {
@@ -31,4 +33,8 @@ function RedIntroduced() {
 
 function NortonIntroduced() {
     Norton.introduceYourself();
+}
+
+function HadleyIntroduced() {
+    Hadley.introduceYourself();
 }
