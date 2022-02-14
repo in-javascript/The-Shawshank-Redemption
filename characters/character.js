@@ -12,6 +12,10 @@ class Character extends Actable {
     throw(item, somewhere) {
         this.act("throws", `${item.name}${somewhere ? " to " + somewhere : somewhere}`);
     }
+
+    shouldBeGrantedParole() {
+        return false;
+    }
 }
 
 export { Character };
