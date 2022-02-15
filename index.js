@@ -16,6 +16,8 @@ import { Tommy } from "./characters/tommyWilliams.js";
 import { Poster } from "./items/poster.js";
 import { AndysWife } from "./characters/mrsDufresne.js";
 import { Elmo } from "./characters/elmoBlatch.js";
+import { Guard } from "./characters/guard.js";
+import { script } from "./helpers/script.js";
 
 const andysGun = new Gun("Andy's gun", false);
 
@@ -45,6 +47,7 @@ let andysRock = null;
     AndySomehowChangesThePoster();
     PoorTommy();
     HopefulAndy();
+    WhereIsAndy();
 })();
 
 function introduction() {
@@ -142,4 +145,22 @@ function ElmoBlatchDoesHisThing() {
 function HopefulAndy() {
     Andy.shareAfterPrisonPlans(Red);
     Andy.shareASecretLocation(Red);
+}
+
+function WhereIsAndy() {
+    const aGuard = new Guard("Unknown Guard");
+
+    if (!aGuard.isAnInmateInTheirCell(Andy)) {
+        aGuard.escalate(`${Andy.name} is not in his cell!`, Norton);
+
+        try {
+            Norton.throw(andysRock, andysPosterOnHisWall.name);
+        } catch {
+            startSearchingAny();
+        }
+    }
+}
+
+function startSearchingAny() {
+    script(`Search for ${Andy.name} started!`);
 }

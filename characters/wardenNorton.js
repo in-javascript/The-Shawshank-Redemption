@@ -1,3 +1,4 @@
+import { nameOfAndysRock, nameOfRaquelWelchPoster } from "../helpers/statics.js";
 import { Character } from "./character.js";
 
 class WardenNortonCharacter extends Character {
@@ -15,6 +16,14 @@ class WardenNortonCharacter extends Character {
 
     putTheBibleAndTheRecordsToSafe() {
         this.act("put The Bible and the records to safe");
+    }
+
+    throw(item, where) {
+        Character.prototype.throw.call(this, item, where);
+
+        if (item.name === nameOfAndysRock && where === nameOfRaquelWelchPoster) {
+            throw new Error("How could this happen?");
+        }
     }
 }
 
