@@ -8,7 +8,7 @@ import { ParoleBoard } from "./institutions/paroleBoard.js";
 import { Gun } from "./items/gun.js";
 import { Brooks } from "./characters/brooksHatlen.js";
 import { Bogs } from "./characters/bogsDiamond.js";
-import { nameOfAndysRock, nameOfAndysRockHammer, nameOfMarilynMonroePoster, nameOfRaquelWelchPoster } from "./helpers/statics.js";
+import { nameOfAndysRock, nameOfAndysRockHammer, nameOfMarilynMonroePoster, nameOfRaquelWelchPoster, nameOfThePlaceAndyPlansToGo } from "./helpers/statics.js";
 import { AndysPrisonCell } from "./places/andysPrisonCell.js";
 import { nameOfRitaHayworth } from "./characters/ritaHayworth.js";
 import { Character } from "./characters/character.js";
@@ -52,6 +52,7 @@ let andysRock = null;
     AndyEscapesPrison();
     WhereIsAndy();
     AndyStartsANewLife();
+    RedStartsANewLife();
 })();
 
 function introduction() {
@@ -187,4 +188,12 @@ function AndyStartsANewLife() {
     Police.arrest(Hadley);
     Police.arrest(Norton);
     Andy.sendPostcard(Red);
+}
+
+function RedStartsANewLife() {
+    Red.hasHope = false;
+    ParoleBoard.assessParoleGrant(Red);
+    Red.goToTheSecretLocation();
+    Red.breakParole();
+    Red.go(nameOfThePlaceAndyPlansToGo);
 }

@@ -4,12 +4,14 @@ import { RockHammer } from "../items/rockHammer.js";
 import { nameOfRitaHayworth, RitaHayworth } from "./ritaHayworth.js";
 import { Poster } from "../items/poster.js";
 import { Rock } from "../items/rock.js";
+import { TheBrewster } from "../places/theBrewster.js";
 
 const nameOfRitaHayworthPoster = `${nameOfRitaHayworth} Poster`;
 
 class EllisBoydReddingCharacter extends Character {
     constructor() {
         super("Red");
+        this.hasHope = true;
     }
 
     get(something) {
@@ -39,6 +41,27 @@ class EllisBoydReddingCharacter extends Character {
             this.say(`Here's a gift from me to you Andy; A ${nameOfMarilynMonroePoster}`);
             return new Poster(nameOfMarilynMonroePoster);
         }
+    }
+
+    get hasHope() {
+        return this._hasHope;
+    }
+
+    set hasHope(has) {
+        this._hasHope = has;
+    }
+
+    shouldBeGrantedParole() {
+        return !this.hasHope;
+    }
+
+    goToTheSecretLocation() {
+        this.act("goes", "to the secret location");
+        this.wealthInUSD = 1000;
+    }
+
+    breakParole() {
+        TheBrewster.carve(`So was ${this.name}`.toUpperCase());
     }
 }
 
