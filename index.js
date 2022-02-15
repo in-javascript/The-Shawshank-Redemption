@@ -53,6 +53,7 @@ let andysRock = null;
     WhereIsAndy();
     AndyStartsANewLife();
     RedStartsANewLife();
+    TheEnd();
 })();
 
 function introduction() {
@@ -196,4 +197,8 @@ function RedStartsANewLife() {
     Red.goToTheSecretLocation();
     Red.breakParole();
     Red.go(nameOfThePlaceAndyPlansToGo);
+}
+
+function TheEnd() {
+    script("THE END");
 }
