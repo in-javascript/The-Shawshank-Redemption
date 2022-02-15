@@ -44,6 +44,7 @@ let andysRock = null;
     TommyIntroduced();
     AndySomehowChangesThePoster();
     PoorTommy();
+    HopefulAndy();
 })();
 
 function introduction() {
@@ -136,4 +137,9 @@ function PoorTommy() {
 function ElmoBlatchDoesHisThing() {
     Elmo.kill(Glenn);
     Elmo.kill(AndysWife);
+}
+
+function HopefulAndy() {
+    Andy.shareAfterPrisonPlans(Red);
+    Andy.shareASecretLocation(Red);
 }
