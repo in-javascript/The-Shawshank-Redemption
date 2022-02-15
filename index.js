@@ -12,6 +12,7 @@ import { nameOfAndysRock, nameOfAndysRockHammer, nameOfMarilynMonroePoster } fro
 import { AndysPrisonCell } from "./places/andysPrisonCell.js";
 import { nameOfRitaHayworth } from "./characters/ritaHayworth.js";
 import { Character } from "./characters/character.js";
+import { Tommy } from "./characters/tommyWilliams.js";
 
 const andysGun = new Gun("Andy's gun", false);
 
@@ -36,6 +37,7 @@ let andysRock = null;
     RedTriesParoleAgain();
     RedGivesAMarilynMonroePosterToAndy();
     NortonStartsTheInsideOutProgram();
+    TommyIntroduced();
 })();
 
 function introduction() {
@@ -106,4 +108,8 @@ function NortonStartsTheInsideOutProgram() {
     Norton.takeBribe(new Character("anyone interested in any dirty business"));
     Andy.provideConsultancyServices(Norton);
     Andy.doTheBooksForNortonsDirtyMoney();
+}
+
+function TommyIntroduced() {
+    Tommy.introduceYourself();
 }
