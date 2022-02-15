@@ -8,7 +8,7 @@ import { ParoleBoard } from "./institutions/paroleBoard.js";
 import { Gun } from "./items/gun.js";
 import { Brooks } from "./characters/brooksHatlen.js";
 import { Bogs } from "./characters/bogsDiamond.js";
-import { nameOfAndysRock, nameOfAndysRockHammer } from "./helpers/statics.js";
+import { nameOfAndysRock, nameOfAndysRockHammer, nameOfMarilynMonroePoster } from "./helpers/statics.js";
 import { AndysPrisonCell } from "./places/andysPrisonCell.js";
 import { nameOfRitaHayworth } from "./characters/ritaHayworth.js";
 import { Character } from "./characters/character.js";
@@ -34,6 +34,7 @@ let andysRock = null;
     AndyStartsDoingTaxReturnsForEveryone();
     BrooksGrantedParole();
     RedTriesParoleAgain();
+    RedGivesAMarilynMonroePosterToAndy();
 })();
 
 function introduction() {
@@ -94,4 +95,8 @@ function BrooksGrantedParole() {
 
 function RedTriesParoleAgain() {
     ParoleBoard.assessParoleGrant(Red);
+}
+
+function RedGivesAMarilynMonroePosterToAndy() {
+    andysPosterOnHisWall = Red.get(nameOfMarilynMonroePoster);
 }

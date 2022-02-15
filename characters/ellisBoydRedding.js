@@ -1,4 +1,4 @@
-import { nameOfAndysRock, nameOfAndysRockHammer } from "../helpers/statics.js";
+import { nameOfAndysRock, nameOfAndysRockHammer, nameOfMarilynMonroePoster } from "../helpers/statics.js";
 import { Character } from "./character.js";
 import { RockHammer } from "../items/rockHammer.js";
 import { nameOfRitaHayworth, RitaHayworth } from "./ritaHayworth.js";
@@ -33,6 +33,11 @@ class EllisBoydReddingCharacter extends Character {
         if (something === nameOfAndysRock) {
             this.say("We collected some stones for you!");
             return new Rock(nameOfAndysRock);
+        }
+
+        if (something === nameOfMarilynMonroePoster) {
+            this.say(`Here's a gift from me to you Andy; A ${nameOfMarilynMonroePoster}`);
+            return new Poster(nameOfMarilynMonroePoster);
         }
     }
 }
