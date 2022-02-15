@@ -8,11 +8,12 @@ import { ParoleBoard } from "./institutions/paroleBoard.js";
 import { Gun } from "./items/gun.js";
 import { Brooks } from "./characters/brooksHatlen.js";
 import { Bogs } from "./characters/bogsDiamond.js";
-import { nameOfAndysRock, nameOfAndysRockHammer, nameOfMarilynMonroePoster } from "./helpers/statics.js";
+import { nameOfAndysRock, nameOfAndysRockHammer, nameOfMarilynMonroePoster, nameOfRaquelWelchPoster } from "./helpers/statics.js";
 import { AndysPrisonCell } from "./places/andysPrisonCell.js";
 import { nameOfRitaHayworth } from "./characters/ritaHayworth.js";
 import { Character } from "./characters/character.js";
 import { Tommy } from "./characters/tommyWilliams.js";
+import { Poster } from "./items/poster.js";
 
 const andysGun = new Gun("Andy's gun", false);
 
@@ -38,6 +39,7 @@ let andysRock = null;
     RedGivesAMarilynMonroePosterToAndy();
     NortonStartsTheInsideOutProgram();
     TommyIntroduced();
+    AndySomehowChangesThePoster();
 })();
 
 function introduction() {
@@ -112,4 +114,8 @@ function NortonStartsTheInsideOutProgram() {
 
 function TommyIntroduced() {
     Tommy.introduceYourself();
+}
+
+function AndySomehowChangesThePoster() {
+    andysPosterOnHisWall = new Poster(nameOfRaquelWelchPoster);
 }
