@@ -8,11 +8,15 @@ import { ParoleBoard } from "./institutions/paroleBoard.js";
 import { Gun } from "./items/gun.js";
 import { Brooks } from "./characters/brooksHatlen.js";
 import { Bogs } from "./characters/bogsDiamond.js";
-import { nameOfAndysRockHammer } from "./helpers/statics.js";
+import { nameOfAndysRock, nameOfAndysRockHammer } from "./helpers/statics.js";
 import { AndysPrisonCell } from "./places/andysPrisonCell.js";
+import { nameOfRitaHayworth } from "./characters/ritaHayworth.js";
 
 const andysGun = new Gun("Andy's gun", false);
+
 let andysRockHammer = null;
+let andysPosterOnHisWall = null;
+let andysRock = null;
 
 (function PlayMovie() {
     introduction();
@@ -25,6 +29,7 @@ let andysRockHammer = null;
     AndyWantsARockHammerFromRed();
     AndyGetsProtectionFromHadley();
     AndyCarvesTheWall();
+    AndyGetsGiftsFromRed();
 })();
 
 function introduction() {
@@ -67,4 +72,9 @@ function AndyGetsProtectionFromHadley() {
 
 function AndyCarvesTheWall() {
     AndysPrisonCell.carve("A");
+}
+
+function AndyGetsGiftsFromRed() {
+    andysPosterOnHisWall = Red.get(nameOfRitaHayworth);
+    andysRock = Red.get(nameOfAndysRock);
 }
