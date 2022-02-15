@@ -53,6 +53,10 @@ class Character extends Actable {
     sendPostcard(someone) {
         this.act("sends postcard", `to ${someone.name}`);
     }
+
+    sleep(seconds) {
+        this.act("sleeps", `for ${seconds} seconds.`);
+    }
 }
 
 export { Character };

@@ -73,6 +73,14 @@ class AndyDufresneCharacter extends Character {
     sendAllBooks(somewhere) {
         this.act("sends all books to", somewhere.name);
     }
+
+    digAHoleInTheWall() {
+        do {
+            this.act("digs some", "in his cell wall");
+            this.sleep(86400);
+            this.act("drops digged dirt", "on the Shawshank garden");
+        } while ((new Date()).getFullYear() < 1966);
+    }
 }
 
 const AndyDufresneHimself = new AndyDufresneCharacter();
