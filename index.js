@@ -35,6 +35,7 @@ let andysRock = null;
     BrooksGrantedParole();
     RedTriesParoleAgain();
     RedGivesAMarilynMonroePosterToAndy();
+    NortonStartsTheInsideOutProgram();
 })();
 
 function introduction() {
@@ -99,4 +100,10 @@ function RedTriesParoleAgain() {
 
 function RedGivesAMarilynMonroePosterToAndy() {
     andysPosterOnHisWall = Red.get(nameOfMarilynMonroePoster);
+}
+
+function NortonStartsTheInsideOutProgram() {
+    Norton.takeBribe(new Character("anyone interested in any dirty business"));
+    Andy.provideConsultancyServices(Norton);
+    Andy.doTheBooksForNortonsDirtyMoney();
 }
