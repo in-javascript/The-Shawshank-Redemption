@@ -47,6 +47,7 @@ let andysRock = null;
     AndySomehowChangesThePoster();
     PoorTommy();
     HopefulAndy();
+    AndyEscapesPrison();
     WhereIsAndy();
 })();
 
@@ -163,4 +164,14 @@ function WhereIsAndy() {
 
 function startSearchingAny() {
     script(`Search for ${Andy.name} started!`);
+}
+
+function AndyEscapesPrison() {
+    Andy.findRope();
+    Andy.replaceOriginalBooksWithDummies();
+    Andy.wearSomeoneElsesCloths(Norton);
+    Andy.crawlInTheTunnel();
+    Andy.crawlInTheSewage();
+    Andy.leaveInmateClothes();
+    Andy.getsWetUnderTheRain();
 }

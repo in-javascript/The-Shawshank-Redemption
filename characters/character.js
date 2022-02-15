@@ -33,6 +33,22 @@ class Character extends Actable {
     kill(someone) {
         this.act("kills", someone.name);
     }
+
+    wearSomeoneElsesCloths(theSomeoneElse) {
+        this.act(`wears ${theSomeoneElse.name}'s cloths`);
+    }
+
+    crawlInTheTunnel() {
+        this.act("crawls in the tunnel");
+    }
+
+    crawlInTheSewage() {
+        this.act("crawls in the sewage");
+    }
+
+    getsWetUnderTheRain() {
+        this.act("gets wet under the rain");
+    }
 }
 
 export { Character };

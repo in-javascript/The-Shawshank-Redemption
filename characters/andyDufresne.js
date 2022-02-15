@@ -47,6 +47,18 @@ class AndyDufresneCharacter extends Character {
     shareASecretLocation(someone) {
         this.say(`${someone.name}, go to the big hayfield up near Buxton, with a long rock wall with a big oak at the north end. You'll find something buried a piece of black volcanic glass, under the bsase of that wall. I want you to have it.`);
     }
+
+    findRope() {
+        this.act("get long rope", "from Heywood");
+    }
+
+    replaceOriginalBooksWithDummies() {
+        this.act("replaces original books with dummies");
+    }
+
+    leaveInmateClothes() {
+        this.act("leaves his inmate clothes", "in the creek");
+    }
 }
 
 const AndyDufresneHimself = new AndyDufresneCharacter();
