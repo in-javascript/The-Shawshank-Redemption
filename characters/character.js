@@ -25,6 +25,10 @@ class Character extends Actable {
     say(something) {
         this.act("says: ", `"${something}"`);
     }
+
+    commitSuicide() {
+        this.act("commits suicie.");
+    }
 }
 
 export { Character };

@@ -32,6 +32,7 @@ let andysRock = null;
     AndyCarvesTheWall();
     AndyGetsGiftsFromRed();
     AndyStartsDoingTaxReturnsForEveryone();
+    BrooksGrantedParole();
 })();
 
 function introduction() {
@@ -83,4 +84,9 @@ function AndyGetsGiftsFromRed() {
 
 function AndyStartsDoingTaxReturnsForEveryone() {
     Andy.provideConsultancyServices(new Character("every guard possible"));
+}
+
+function BrooksGrantedParole() {
+    ParoleBoard.assessParoleGrant(Brooks);
+    Brooks.cantTakeItAnymore();
 }

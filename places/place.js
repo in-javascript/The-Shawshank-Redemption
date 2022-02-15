@@ -8,6 +8,10 @@ class Place extends Actable {
     carve(message) {
         this.act("is carved with this message: ", `"${message}"`)
     }
+
+    welcome(someone) {
+        this.act("welcomes", `${someone.name}`);
+    }
 }
 
 export { Place };
