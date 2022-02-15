@@ -29,6 +29,10 @@ class Character extends Actable {
     commitSuicide() {
         this.act("commits suicie.");
     }
+
+    kill(someone) {
+        this.act("kills", someone.name);
+    }
 }
 
 export { Character };

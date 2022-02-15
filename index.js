@@ -14,6 +14,8 @@ import { nameOfRitaHayworth } from "./characters/ritaHayworth.js";
 import { Character } from "./characters/character.js";
 import { Tommy } from "./characters/tommyWilliams.js";
 import { Poster } from "./items/poster.js";
+import { AndysWife } from "./characters/mrsDufresne.js";
+import { Elmo } from "./characters/elmoBlatch.js";
 
 const andysGun = new Gun("Andy's gun", false);
 
@@ -23,6 +25,7 @@ let andysRock = null;
 
 (function PlayMovie() {
     introduction();
+    ElmoBlatchDoesHisThing();
     court();
     RedIntroduced();
     NortonIntroduced();
@@ -40,6 +43,7 @@ let andysRock = null;
     NortonStartsTheInsideOutProgram();
     TommyIntroduced();
     AndySomehowChangesThePoster();
+    PoorTommy();
 })();
 
 function introduction() {
@@ -118,4 +122,18 @@ function TommyIntroduced() {
 
 function AndySomehowChangesThePoster() {
     andysPosterOnHisWall = new Poster(nameOfRaquelWelchPoster);
+}
+
+function PoorTommy() {
+    Tommy.say(`Hey, ${Andy.name} is not a killer. Another guy from another prison told me that he killed ${AndysWife.name} and ${Glenn.name}.`);
+    Andy.say(`Hey, I am not a killer. Another guy from another prison told ${Tommy.name} that he killed my wife and ${Glenn.name}.`);
+    Norton.say(`Hey, is ${Andy.name} not a killer ${Tommy.name}? Did another guy from another prison told you that he killed ${AndysWife.name} and ${Glenn.name}?`);
+    Tommy.say(`Yes ${Norton.name}, ${Andy.name} is not a killer. Another guy from another prison told me that he killed ${AndysWife.name} and ${Glenn.name}.`);
+    Norton.say(`I need ${Andy.name} as an inmate; he knows too much. ${Hadley.name}?`);
+    Hadley.kill(Tommy);
+}
+
+function ElmoBlatchDoesHisThing() {
+    Elmo.kill(Glenn);
+    Elmo.kill(AndysWife);
 }
