@@ -59,6 +59,20 @@ class AndyDufresneCharacter extends Character {
     leaveInmateClothes() {
         this.act("leaves his inmate clothes", "in the creek");
     }
+
+    switchIdentities() {
+        this.act(`switches his identity from ${this.name}`, `to ${this.theSecondCousingToHarveyTheRabbit.name}`);
+        this.name = this.theSecondCousingToHarveyTheRabbit.name;
+    }
+
+    getAllDirtyMoney() {
+        this.act(`gets all money of ${this.theSecondCousingToHarveyTheRabbit.name}`);
+        this.wealthInUSD = 370000;
+    }
+
+    sendAllBooks(somewhere) {
+        this.act("sends all books to", somewhere.name);
+    }
 }
 
 const AndyDufresneHimself = new AndyDufresneCharacter();

@@ -18,6 +18,8 @@ import { AndysWife } from "./characters/mrsDufresne.js";
 import { Elmo } from "./characters/elmoBlatch.js";
 import { Guard } from "./characters/guard.js";
 import { script } from "./helpers/script.js";
+import { PortlandDailyBugle } from "./institutions/portlandDailyBugle.js";
+import { Police } from "./institutions/police.js";
 
 const andysGun = new Gun("Andy's gun", false);
 
@@ -49,6 +51,7 @@ let andysRock = null;
     HopefulAndy();
     AndyEscapesPrison();
     WhereIsAndy();
+    AndyStartsANewLife();
 })();
 
 function introduction() {
@@ -174,4 +177,14 @@ function AndyEscapesPrison() {
     Andy.crawlInTheSewage();
     Andy.leaveInmateClothes();
     Andy.getsWetUnderTheRain();
+}
+
+function AndyStartsANewLife() {
+    Andy.switchIdentities();
+    Andy.getAllDirtyMoney();
+    Andy.sendAllBooks(PortlandDailyBugle);
+    PortlandDailyBugle.publishDirtyBusiness(Norton);
+    Police.arrest(Hadley);
+    Police.arrest(Norton);
+    Andy.sendPostcard(Red);
 }

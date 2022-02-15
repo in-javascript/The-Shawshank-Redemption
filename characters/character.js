@@ -49,6 +49,10 @@ class Character extends Actable {
     getsWetUnderTheRain() {
         this.act("gets wet under the rain");
     }
+
+    sendPostcard(someone) {
+        this.act("sends postcard", `to ${someone.name}`);
+    }
 }
 
 export { Character };
