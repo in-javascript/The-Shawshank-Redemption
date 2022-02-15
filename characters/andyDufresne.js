@@ -8,8 +8,9 @@ class AndyDufresneCharacter extends Character {
     }
 
     provideConsultancyServices(someone) {
+        this.act("provides consultancy services to", someone.name);
+
         if (someone === Hadley) {
-            this.act("provides consultancy services to", someone.name);
             script(`${Hadley.name} saves $35.000!`);
             Hadley.protect(this);
         }

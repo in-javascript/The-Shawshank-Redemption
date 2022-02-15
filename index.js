@@ -11,6 +11,7 @@ import { Bogs } from "./characters/bogsDiamond.js";
 import { nameOfAndysRock, nameOfAndysRockHammer } from "./helpers/statics.js";
 import { AndysPrisonCell } from "./places/andysPrisonCell.js";
 import { nameOfRitaHayworth } from "./characters/ritaHayworth.js";
+import { Character } from "./characters/character.js";
 
 const andysGun = new Gun("Andy's gun", false);
 
@@ -30,6 +31,7 @@ let andysRock = null;
     AndyGetsProtectionFromHadley();
     AndyCarvesTheWall();
     AndyGetsGiftsFromRed();
+    AndyStartsDoingTaxReturnsForEveryone();
 })();
 
 function introduction() {
@@ -77,4 +79,8 @@ function AndyCarvesTheWall() {
 function AndyGetsGiftsFromRed() {
     andysPosterOnHisWall = Red.get(nameOfRitaHayworth);
     andysRock = Red.get(nameOfAndysRock);
+}
+
+function AndyStartsDoingTaxReturnsForEveryone() {
+    Andy.provideConsultancyServices(new Character("every guard possible"));
 }
