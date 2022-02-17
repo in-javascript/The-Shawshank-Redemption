@@ -18,7 +18,7 @@ class EllisBoydReddingCharacter extends Character {
         if (something === nameOfAndysRockHammer) {
             this.say(`Brooks will bring you your ${nameOfAndysRockHammer}. Don't dig a tunner under the wall with it!`);
 
-            return new RockHammer();
+            return new RockHammer(nameOfAndysRockHammer);
         }
 
         if (something === nameOfRitaHayworth) {

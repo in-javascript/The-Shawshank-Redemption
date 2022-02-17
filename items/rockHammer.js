@@ -1,8 +1,8 @@
 import { Item } from "./item.js";
 
 class RockHammer extends Item {
-    constructor() {
-        super();
+    constructor(name) {
+        super(name);
     }
 }
 
