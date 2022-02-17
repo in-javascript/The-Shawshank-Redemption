@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/in-javascript/The-Shawshank-Redemption/issues"
   },
-  "homepage": "https://github.com/in-javascript/The-Shawshank-Redemption#readme"
+  "homepage": "https://github.com/in-javascript/The-Shawshank-Redemption#readme",
+  "dependencies": {
+    "sleep": "^6.3.0"
+  }
 }
