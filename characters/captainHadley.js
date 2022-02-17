@@ -23,6 +23,10 @@ class CaptainHadleyCharacter extends Character {
 
         return this._protectionList;
     }
+
+    beatToDeath(someone) {
+        someone.handicappedBy(this);
+    }
 }
 
 const CaptainHadleyHimself = new CaptainHadleyCharacter();

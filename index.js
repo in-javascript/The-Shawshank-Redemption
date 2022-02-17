@@ -37,6 +37,7 @@ let andysRock = null;
     BrooksIntroduced();
     BogsIntroduced();
     AndyWantsARockHammerFromRed();
+    BogsStartsMolestingAndy();
     AndyGetsProtectionFromHadley();
     AndyCarvesTheWall();
     AndyGetsGiftsFromRed();
@@ -201,4 +202,8 @@ function RedStartsANewLife() {
 
 function TheEnd() {
     script("THE END");
+}
+
+function BogsStartsMolestingAndy() {
+    Bogs.startMolesting(Andy);
 }

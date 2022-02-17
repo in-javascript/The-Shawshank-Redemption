@@ -57,6 +57,10 @@ class Character extends Actable {
     sleep(seconds) {
         this.act("sleeps", `for ${seconds} seconds.`);
     }
+
+    handicappedBy(someone) {
+        this.handicapped = true;
+    }
 }
 
 export { Character };
