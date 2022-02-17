@@ -18,16 +18,16 @@ class AndyDufresneCharacter extends Character {
         }
 
         if (someone === Norton) {
-            script(`new Character("${this.theSecondCousingToHarveyTheRabbit.name}")`);
+            script(`new Character("${this.theSecondCousinToHarveyTheRabbit.name}")`);
         }
     }
 
-    get theSecondCousingToHarveyTheRabbit() {
-        if (!this._theSecondCousingToHarveyTheRabbit) {
-            this._theSecondCousingToHarveyTheRabbit = new Character("Randall Stephens");
+    get theSecondCousinToHarveyTheRabbit() {
+        if (!this._theSecondCousinToHarveyTheRabbit) {
+            this._theSecondCousinToHarveyTheRabbit = new Character("Randall Stephens");
         }
 
-        return this._theSecondCousingToHarveyTheRabbit;
+        return this._theSecondCousinToHarveyTheRabbit;
     }
 
     doTheBooksForNortonsDirtyMoney() {
@@ -45,7 +45,7 @@ class AndyDufresneCharacter extends Character {
     }
 
     shareASecretLocation(someone) {
-        this.say(`${someone.name}, go to the big hayfield up near Buxton, with a long rock wall with a big oak at the north end. You'll find something buried a piece of black volcanic glass, under the bsase of that wall. I want you to have it.`);
+        this.say(`${someone.name}, go to the big hayfield up near Buxton, with a long rock wall with a big oak at the north end. You'll find something buried a piece of black volcanic glass, under the base of that wall. I want you to have it.`);
     }
 
     findRope() {
@@ -61,12 +61,12 @@ class AndyDufresneCharacter extends Character {
     }
 
     switchIdentities() {
-        this.act(`switches his identity from ${this.name}`, `to ${this.theSecondCousingToHarveyTheRabbit.name}`);
-        this.name = this.theSecondCousingToHarveyTheRabbit.name;
+        this.act(`switches his identity from ${this.name}`, `to ${this.theSecondCousinToHarveyTheRabbit.name}`);
+        this.name = this.theSecondCousinToHarveyTheRabbit.name;
     }
 
     getAllDirtyMoney() {
-        this.act(`gets all money of ${this.theSecondCousingToHarveyTheRabbit.name}`);
+        this.act(`gets all money of ${this.theSecondCousinToHarveyTheRabbit.name}`);
         this.wealthInUSD = 370000;
     }
 

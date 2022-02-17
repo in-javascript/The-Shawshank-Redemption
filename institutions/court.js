@@ -20,14 +20,14 @@ class CourtInstitution extends Actable {
     verdict(evidence, someone) {
         if (!evidence) {
             for (let i = 0; i < 2; i++) {
-                this.sentenceForList(someone);
+                this.sentenceForLife(someone);
             }
         } else {
             throw new Error("Not scripted!");
         }
     }
 
-    sentenceForList(someone) {
+    sentenceForLife(someone) {
         this.act("sentences for life", someone.name);
     }
 }

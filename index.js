@@ -137,7 +137,7 @@ function AndySomehowChangesThePoster() {
 function PoorTommy() {
     Tommy.say(`Hey, ${Andy.name} is not a killer. Another guy from another prison told me that he killed ${AndysWife.name} and ${Glenn.name}.`);
     Andy.say(`Hey, I am not a killer. Another guy from another prison told ${Tommy.name} that he killed my wife and ${Glenn.name}.`);
-    Norton.say(`Hey, is ${Andy.name} not a killer ${Tommy.name}? Did another guy from another prison told you that he killed ${AndysWife.name} and ${Glenn.name}?`);
+    Norton.say(`Hey, is ${Andy.name} not a killer ${Tommy.name}? Did another guy from another prison tell you that he killed ${AndysWife.name} and ${Glenn.name}?`);
     Tommy.say(`Yes ${Norton.name}, ${Andy.name} is not a killer. Another guy from another prison told me that he killed ${AndysWife.name} and ${Glenn.name}.`);
     Norton.say(`I need ${Andy.name} as an inmate; he knows too much. ${Hadley.name}?`);
     Hadley.kill(Tommy);
@@ -162,12 +162,12 @@ function WhereIsAndy() {
         try {
             Norton.throw(andysRock, andysPosterOnHisWall.name);
         } catch {
-            startSearchingAny();
+            startSearchingAndy();
         }
     }
 }
 
-function startSearchingAny() {
+function startSearchingAndy() {
     script(`Search for ${Andy.name} started!`);
 }
 
@@ -178,7 +178,7 @@ function AndyEscapesPrison() {
     Andy.crawlInTheTunnel();
     Andy.crawlInTheSewage();
     Andy.leaveInmateClothes();
-    Andy.getsWetUnderTheRain();
+    Andy.getWetUnderTheRain();
 }
 
 function AndyStartsANewLife() {

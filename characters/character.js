@@ -27,7 +27,7 @@ class Character extends Actable {
     }
 
     commitSuicide() {
-        this.act("commits suicie.");
+        this.act("commits suicide");
     }
 
     kill(someone) {
@@ -46,7 +46,7 @@ class Character extends Actable {
         this.act("crawls in the sewage");
     }
 
-    getsWetUnderTheRain() {
+    getWetUnderTheRain() {
         this.act("gets wet under the rain");
     }
 

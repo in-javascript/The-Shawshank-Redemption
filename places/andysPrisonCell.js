@@ -1,4 +1,5 @@
 import { Andy } from "../characters/andyDufresne.js";
+import { script } from "../helpers/script.js";
 import { Place } from "../places/place.js";
 
 class PrisonCell extends Place {
@@ -8,7 +9,7 @@ class PrisonCell extends Place {
 
     async carve(message) {
         Place.prototype.carve.call(this, message);
-        screen(`Piece of the ${this.name} wall dropped to the ground.`);
+        script(`Piece of the ${this.name} wall dropped to the ground.`);
 
         Andy.digAHoleInTheWall();
     }

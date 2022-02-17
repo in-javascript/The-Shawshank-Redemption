@@ -15,7 +15,7 @@ class WardenNortonCharacter extends Character {
     }
 
     putTheBibleAndTheRecordsToSafe() {
-        this.act("put The Bible and the records to safe");
+        this.act("puts The Bible and the records to safe");
     }
 
     throw(item, where) {
