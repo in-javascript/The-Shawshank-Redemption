@@ -1,7 +1,7 @@
 {
   "name": "the-shawshank-redemption",
   "version": "1.0.0",
-  "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+  "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency... in javascript!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
